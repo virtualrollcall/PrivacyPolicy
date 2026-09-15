@@ -120,7 +120,7 @@
 <div class="container">
     <main>
         <h1>Privacy Policy</h1>
-        <div class="last-updated">Last updated: August 1, 2026</div>
+        <div class="last-updated">Last updated: <span id="automated-date">Loading...</span></div>
 
         <p>This Privacy Policy describes how Virtual Roll Call collects, uses, and handles your information when you use the Virtual Roll Call mobile application and visit any of our hosted website pages.</p>
 
@@ -198,5 +198,19 @@
     </footer>
 </div>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Reads the file's last modified timestamp from the GitHub Pages server
+        const lastMod = new Date(document.lastModified);
+        
+        // Options to format the date neatly (e.g., "August 1, 2026")
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = lastMod.toLocaleDateString('en-US', options);
+        
+        // Inserts the formatted date directly into your text
+        document.getElementById('automated-date').textContent = formattedDate;
+    });
+</script>
+    
 </body>
 </html>
