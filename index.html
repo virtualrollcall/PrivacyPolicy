@@ -140,8 +140,8 @@
         <div class="sub-section">
             <h3>Device Information and Session Data</h3>
             <ul>
-                <li><strong>Data Collected:</strong> Your device's IP address.</li>
-                <li><strong>Purpose:</strong> Virtual Roll Call uses your IP address to generate a unique session token. This token keeps you securely logged into the app, maintains your active session, and protects your account from unauthorized access.</li>
+                <li><strong>Data Collected:</strong> Your device's IP address and a unique push notification device identifier (Firebase Cloud Messaging / APNs registration token).</li>
+                <li><strong>Purpose:</strong> Virtual Roll Call uses your IP address to generate a unique session token that keeps you securely logged in and protects your account from unauthorized access. If you grant push notification permissions, Virtual Roll Call stores your device's push notification token linked to your user account solely to deliver operational alerts and feed updates to your device. This token is unlinked and removed when you revoke notification permissions in your device settings.</li>
             </ul>
         </div>
 
@@ -182,7 +182,8 @@
         <ul>
             <li><strong>No Data Brokering:</strong> Virtual Roll Call does not sell, rent, trade, or share user profiles, device information, uploaded media, or session tokens with third-party advertisers, data brokers, or marketing networks.</li>
             <li><strong>No Cross-App Tracking:</strong> Virtual Roll Call does not participate in cross-app tracking. Virtual Roll Call does not track your activity across other companies' apps or websites.</li>
-            <li><strong>Internal Infrastructure Only:</strong> Your data is processed exclusively within Virtual Roll Call's secure enterprise infrastructure to provide and maintain the application's core communication functions. Your device data is only transmitted to our trusted hosting provider (GitHub Pages) when you view this document or Support Contact pages, as described in Section 2.</li>
+            <li><strong>Internal Infrastructure & Essential Service Providers:</strong> Your core application data is processed within Virtual Roll Call's secure enterprise infrastructure to provide and maintain the application's communication functions. Device data is only transmitted externally to our website hosting provider (GitHub Pages, as described in Section 2) and to push notification delivery services (described below) when strictly required for platform operation.</li>
+            <li><strong>Push Notification Delivery Providers:</strong> To deliver native mobile notifications, push notification tokens and notification payloads are transmitted through Google Firebase Cloud Messaging (FCM) and Apple Push Notification service (APNs) strictly as technical service providers for message routing. Neither Google nor Apple is authorized to use this data for advertising or cross-app tracking.</li>
         </ul>
 
         <h2>5. User-Generated Content (UGC) and Compliance Moderation</h2>
